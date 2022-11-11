@@ -1,0 +1,18 @@
+body {
+    background: #F8F9FB;
+}
+
+
+section {
+    padding-top: 30px;
+}
+
+.error{
+    color: firebrick;
+    display: flex;
+}
+
+.img-thumbnail{
+    width:250px;
+    height:250px
+}

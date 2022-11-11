@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали фильма</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="pagestyle.css"> 
+</head>
+<body> 
+    <div id="navbar-container">
+    </div>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark d-none" id="navbar-changed">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/start-page/startpage.html">Movies Catalog</a>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="/start-page/startpage.html">Фильмы</a>
+                <a class="nav-link favourite-films" href="/favourite-page/favouritepage.html"></a>
+                <a class="nav-link myprofile" href="/login-autorisation-page/userpage.html"></a>
+            </div>
+          </div>
+            <div class="navbar-nav">
+                <a class="nav-link d-flex item1 active" aria-current="page" href="#"></a>
+                <a class="nav-link d-flex item2 active" aria-current="page" href="#"></a>
+            </div>
+        </div>
+      </nav>
+
+      <div class="card d-none" id="review-template">
+        <div class="card-header">
+            <div class="row g-0">
+                <div class="col-1">
+                    <img src="UserPic.jpg" class="img-thumbnail rounded-circle border-0 userpic" alt="...">
+                </div>
+                <div class="col-md-11 d-flex justify-content-between">
+                    <div class="col-8 py-4" >
+                        <div class="fw-bold name">
+                            Анонимный пользователь
+                        </div>
+                    </div>
+                    <div class="col-3 py-2">
+                        <div>
+                            Оценка:
+                            <span class="badge point">5</span>
+                        </div>
+                        
+                        <div class="date">
+                            Дата отзыва:
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+        <p class="card-text mb-0 review-text">
+            
+        </p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container" id="movie-detail">
+            <div class="card rounded-1">
+                <div class="row justify-content-center">
+                    <div class="col-4 gy-4">
+                        <img src="" class="card-img img-fluid rounded-0 movie-poster" alt="">
+                    </div>
+
+                    <div class="col-7">
+                        <div class="card-body">
+                            <div id="title-info">
+                                <div class="row g-3">
+                                    <h1 class="movie-name"></h1>
+                                    <div class="description"></div>
+                                    <button type="button" class="btn btn-outline-primary col-5" id="fav-button">Добавить в избранное +</button>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-3 py-5">
+                                <ul class="list-group list-group-flush">
+                                    <h4 class="card-title">О фильме</h4>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>Год производства</div>
+                                        <div class="year"style="font-weight:bold"></div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>Страна</div>
+                                        <div class="country" style="font-weight:bold"></div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div >Жанр</div>
+                                        <div class="genre right-align" style="font-weight:bold"></div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>Время</div>
+                                        <div class="time" style="font-weight:bold"></div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between row taglineField" id="taglineField">
+                                        <div  class="col-sm-6 col-md-3">Слоган</div>
+                                        <div class="tagline col-6 col-md-9 right-align" style="font-weight:bold"></div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>Режиссер</div>
+                                        <div class="director" style="font-weight:bold"></div>
+                                    </li>
+                                    <li class="list-group-item budgetField d-flex justify-content-between">
+                                        <div>Бюджет</div>
+                                        <div class="budget" style="font-weight:bold"></div>
+                                    </li>
+                                    <li class="list-group-item feesField d-flex justify-content-between">
+                                        <div>Сборы в мире</div>
+                                        <div class="fees" style="font-weight:bold"></div>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <div>Возраст</div>
+                                        <div class='d-flex justify-content-end'>
+                                            <span class="badge bg-secondary">
+                                                <div class="ageLimit" style="font-weight:bold"></div>
+                                            </span>
+                                        </div>
+                        
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container px-5">
+                    <div class="row gx-5">
+                      <div class="col">
+                        <h3>Отзывы и оценки</h3>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-3 px-5" id="review-form">
+                    <div class="card">
+                        <div class="card-header">
+                           Добавить отзыв
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Текст отзыва</label>
+                                <textarea type="text" class="form-control" id="newreview-text" rows="3"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label fw-bold">Оценка</label>
+                                <select class="form-select" aria-label="Default select example" id="newreview-raiting" >
+                                    <option selected value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label mb-3" for="flexCheckDefault">
+                                  Оставить отзыв анонимно
+                                </label>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="review-button">Сохранить</button>
+                            <button type="button" class="btn btn-primary d-none" id="change-review">Изменить</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="d-grid gap-3 px-5 py-4" id="reviews-container">
+                    <div class="card d-none" id="myreview-template">
+                        <div class="card-header">
+                            <div class="row g-0">
+                                <div class="col-1">
+                                    <img src="UserPic.jpg" class="img-thumbnail rounded-circle border-0 userpic" alt="...">
+                                </div>
+                                <div class="col-md-11 d-flex justify-content-between">
+                                    <div class="col-8 py-4" >
+                                        <div class="fw-bold name">
+                                            Анонимный пользователь (Мой отзыв)
+                                        </div>
+                                    </div>
+                                    <div class="col-3 py-2">
+                                        <div>
+                                            Оценка:
+                                            <span class="badge point">5</span>
+                                        </div>
+                                        
+                                        <div class="date">
+                                            Дата отзыва:
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                        <p class="card-text mb-0 review-text">
+                            
+                        </p>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-warning" id = "changeReview">Редактировать</button>    
+                            <button type="button" class="btn btn-danger" id="deleteRewview">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="/film-detail-page/addfav.js"></script>
+    <script src="/film-detail-page/detailpage.js"></script>
+    <script src="/film-detail-page/createreview.js"></script>
+    <script src="/film-detail-page/changedelreview.js"></script>
+</body>
+</html>

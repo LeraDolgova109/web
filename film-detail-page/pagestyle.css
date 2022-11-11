@@ -1,0 +1,18 @@
+body {
+    background: #F8F9FB;
+}
+
+
+section {
+    padding-top: 30px;
+}
+
+.img-thumbnail{
+    width:70px;
+    height:70px
+}
+
+.right-align{
+    text-align: right;
+}
+
